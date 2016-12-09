@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CleanCodeMVVM</string>
+    <string name="reload">RELOAD</string>
+</resources>

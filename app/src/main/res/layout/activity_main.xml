@@ -1,0 +1,52 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+
+        <variable
+            name="handler"
+            type="com.android.indie.school.cleancodemvvm.activity.home.HomeHandler"/>
+
+        <variable
+            name="viewModel"
+            type="com.android.indie.school.cleancodemvvm.activity.home.HomeViewModel"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.home.HomeActivity">
+
+        <include
+            android:id="@+id/includedToolbar"
+            layout="@layout/layout_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/includedToolbar"
+            android:divider="#00000000"/>
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{viewModel.isInProgress ? View.VISIBLE : View.GONE}"
+            android:layout_centerInParent="true"/>
+
+        <!--<Button-->
+            <!--android:id="@+id/btnReload"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/reload"-->
+            <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+            <!--android:textStyle="bold"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:onClick="@{(view) -> handler.handleReload()}"/>-->
+
+    </RelativeLayout>
+</layout>
