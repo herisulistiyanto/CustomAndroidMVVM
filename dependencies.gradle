@@ -2,12 +2,14 @@ ext {
 
     supportLibraryVersion = '25.0.1'
     espressoCoreVersion = '2.2.2'
-    okHttpVersion = '3.2.0'
+    okHttpVersion = '3.6.0'
     retrofitVersion = '2.0.2'
-    daggerVersion = '2.5'
+    daggerVersion = '2.9'
     glideVersion = '3.7.0'
     rxJavaVersion = '1.1.6'
     rxAndroidVersion = '1.2.1'
+    mockitoCoreVersion = '2.7.14'
+    mockWebServerVersion = '3.6.0'
 
     supportDependencies = [
             appCompat       : "com.android.support:appcompat-v7:${supportLibraryVersion}",
@@ -33,9 +35,20 @@ ext {
             glassfishJavaxAnnotation    : "org.glassfish:javax.annotation:10.0-b28",
     ]
 
+    testSupportDependencies = [
+            runner                  : "com.android.support.test:runner:0.5",
+            rules                   : "com.android.support.test:rules:0.5",
+            espressoCore            : "com.android.support.test.espresso:espresso-core:${espressoCoreVersion}",
+            espressoIntents         : "com.android.support.test.espresso:espresso-intents:${espressoCoreVersion}",
+            espressoContrib         : "com.android.support.test.espresso:espresso-contrib:${espressoCoreVersion}",
+            espressoIdlingResource  : "com.android.support.test.espresso:espresso-idling-resource:${espressoCoreVersion}"
+    ]
+
     testLibraries = [
             junit               : "junit:junit:4.12",
-            espressoCore        : "com.android.support.test.espresso:espresso-core:${espressoCoreVersion}"
+            espressoCore        : "com.android.support.test.espresso:espresso-core:${espressoCoreVersion}",
+            mockitoCore         : "org.mockito:mockito-core:${mockitoCoreVersion}",
+            mockWebServer       : "com.squareup.okhttp3:mockwebserver:${mockWebServerVersion}"
     ]
 
 }

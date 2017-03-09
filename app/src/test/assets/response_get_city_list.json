@@ -1,0 +1,42 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "name": "Yogyakarta",
+      "description": "201 Hotel",
+      "background": "http://www.tnetnoc.com/hotelphotos/591/327591/2631759-The-Cangkringan-Spa-Villas-Hotel-Yogyakarta-Guest-Room-3-RTS.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Jakarta",
+      "description": "71 Hotel",
+      "background": "https://media-cdn.tripadvisor.com/media/photo-s/08/dc/c3/be/the-park-lane-jakarta.jpg"
+    },
+    {
+      "id": "3",
+      "name": "San Fransisco",
+      "description": "309 Hotel",
+      "background": "http://hotelunionsquare.com/sites/default/files/HUS-Home-2.jpg"
+    },
+    {
+      "id": "4",
+      "name": "New York",
+      "description": "101 Hotel",
+      "background": "https://a1.cdn-hotels.com/cos/production48/d1785/10fa68a0-ac68-11e4-99a1-d89d672bd508.jpg"
+    },
+    {
+      "id": "5",
+      "name": "Bali",
+      "description": "30 Hotel",
+      "background": "http://balispecialevent.com/images/bali-hotel.jpg"
+    },
+    {
+      "id": "6",
+      "name": "Paris",
+      "description": "189 Hotel",
+      "background": "http://www.hotel-r.net/im/hotel/bg/paris-hotel-21.jpg"
+    }
+  ],
+  "message": "Get city list.",
+  "status": 200
+}

@@ -1,22 +1,17 @@
 package com.android.indie.school.cleancodemvvm.models;
 
-import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 
 public class CityListData {
 
     @SerializedName("id")
-    @Expose
     private String id;
     @SerializedName("name")
-    @Expose
     private String name;
     @SerializedName("description")
-    @Expose
     private String description;
     @SerializedName("background")
-    @Expose
     private String background;
 
     public String getId() {

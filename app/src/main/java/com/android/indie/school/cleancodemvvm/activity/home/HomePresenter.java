@@ -54,7 +54,7 @@ public class HomePresenter extends BasePresenter<HomeView, HomeViewModel> {
             subscriptions.clear();
         }
 
-        getCityList();
+        view.fetchData();
     }
 
     public void onStop() {

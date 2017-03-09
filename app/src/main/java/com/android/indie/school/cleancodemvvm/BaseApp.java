@@ -7,8 +7,6 @@ import com.android.indie.school.cleancodemvvm.deps.component.DaggerAppComponent;
 import com.android.indie.school.cleancodemvvm.deps.module.AppModule;
 import com.android.indie.school.cleancodemvvm.deps.module.NetworkModule;
 
-import java.io.File;
-
 /**
  * Created by herisulistiyanto on 12/6/16.
  */
@@ -20,10 +18,9 @@ public class BaseApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        File cacheFile = new File(getCacheDir(), "responses");
         setAppComponent(DaggerAppComponent.builder()
                 .appModule(new AppModule(this))
-                .networkModule(new NetworkModule(cacheFile))
+                .networkModule(new NetworkModule(BuildConfig.BASEURL))
                 .build());
     }
 

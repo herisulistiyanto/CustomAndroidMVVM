@@ -1,12 +1,10 @@
 package com.android.indie.school.cleancodemvvm.deps.module;
 
-import com.android.indie.school.cleancodemvvm.BuildConfig;
 import com.android.indie.school.cleancodemvvm.networking.NetworkService;
 import com.android.indie.school.cleancodemvvm.networking.Service;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 import javax.inject.Named;
@@ -26,10 +24,10 @@ import retrofit2.converter.scalars.ScalarsConverterFactory;
  */
 @Module
 public class NetworkModule {
-    File cacheFile;
+    String baseUrl;
 
-    public NetworkModule(File cacheFile) {
-        this.cacheFile = cacheFile;
+    public NetworkModule(String baseUrl) {
+        this.baseUrl = baseUrl;
     }
 
     @Provides
@@ -69,7 +67,7 @@ public class NetworkModule {
     @Named("baseRetrofit")
     public Retrofit provideBaseRetrofit(@Named("baseOkhttp3") OkHttpClient okHttpClient) {
         return new Retrofit.Builder()
-                .baseUrl(BuildConfig.BASEURL)
+                .baseUrl(this.baseUrl)
                 .client(okHttpClient)
                 .addConverterFactory(GsonConverterFactory.create())
                 .addConverterFactory(ScalarsConverterFactory.create())
